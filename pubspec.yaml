@@ -1,5 +1,5 @@
 name: generic_json_parser
-description: A new Flutter package project.
+description: Generic utility functions for json parsing.
 version: 0.0.1
 homepage: https://github.com/mixin27/generic-json-parser
 
