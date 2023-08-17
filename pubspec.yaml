@@ -1,5 +1,5 @@
 name: generic_json_parser
-description: Generic utility functions for json parsing.
+description: Generic utility functions for json parsing including background parsing.
 version: 0.0.1
 homepage: https://github.com/mixin27/generic-json-parser
 
