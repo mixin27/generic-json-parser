@@ -1,7 +1,5 @@
 import 'dart:convert';
-
 import 'package:flutter/foundation.dart';
-
 import 'types.dart';
 
 /// Json parsing utility functions for `list` and `object`.
