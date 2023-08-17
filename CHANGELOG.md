@@ -1,3 +1,7 @@
+## 0.0.2
+
+- Minor improvement
+
 ## 0.0.1
 
 - `parseJsonList`
