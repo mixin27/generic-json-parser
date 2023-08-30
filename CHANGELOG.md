@@ -1,3 +1,7 @@
+## 0.0.3
+
+- Change`FromJsonCallback` input to `generic` type.
+
 ## 0.0.2
 
 - Minor improvement

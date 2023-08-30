@@ -17,9 +17,9 @@ class GenericJsonParser {
   /// `data` - Data list of `response.data` from response.
   ///
   /// `useDioPackage` - If you are using [Dio] package, you must supply `true` value. Default is `false`.
-  static List<T> parseJsonList<T>(
+  static List<T> parseJsonList<T, F>(
     dynamic data,
-    FromJsonCallback<T> fromJson, {
+    FromJsonCallback<T, F> fromJson, {
     bool useDioPackage = false,
   }) {
     // ignore: prefer_typing_uninitialized_variables
@@ -45,9 +45,9 @@ class GenericJsonParser {
   /// `data` - Data object of `response.data` from response.
   ///
   /// `useDioPackage` - If you are using [Dio] package, you must supply `true` value. Default is `false`.
-  static T parseJsonObject<T>(
+  static T parseJsonObject<T, F>(
     dynamic data,
-    FromJsonCallback<T> fromJson, {
+    FromJsonCallback<T, F> fromJson, {
     bool useDioPackage = false,
   }) {
     // ignore: prefer_typing_uninitialized_variables
@@ -60,13 +60,13 @@ class GenericJsonParser {
   }
 
   /// Parse `json` data list in background using `compute()` function.
-  static Future<List<T>> computeParseJsonList<T, D>(
+  static Future<List<T>> computeParseJsonList<T, D, F>(
     D data,
-    FromJsonCallback<T> fromJson, {
+    FromJsonCallback<T, F> fromJson, {
     bool useDioPackage = false,
   }) {
     return compute(
-      (message) => parseJsonList<T>(
+      (message) => parseJsonList<T, F>(
         message,
         fromJson,
         useDioPackage: useDioPackage,
@@ -76,13 +76,13 @@ class GenericJsonParser {
   }
 
   /// Parse `json` data in background using `compute()` function.
-  static Future<T> computeParseJsonObject<T, D>(
+  static Future<T> computeParseJsonObject<T, D, F>(
     D data,
-    FromJsonCallback<T> fromJson, {
+    FromJsonCallback<T, F> fromJson, {
     bool useDioPackage = false,
   }) {
     return compute(
-      (message) => parseJsonObject<T>(
+      (message) => parseJsonObject<T, F>(
         message,
         fromJson,
         useDioPackage: useDioPackage,
